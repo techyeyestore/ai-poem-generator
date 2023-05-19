@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("W_fZSVd3RKDhij62_");
+        })();
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/privacy-policy">Privacy</a></li>
+        </ul>
+    </nav>
+
+    <div class="outer-container">
+        <div class="container">
+
+            <h1>Contact Us For Any Query</h1>
+            <div>
+                <label for="name" class="input-label">Name:</label>
+                <input type="text" id="name" class="form-inputs" required>
+                <div class="error" id="name-error"></div>
+            </div>
+            <div>
+                <label for="email" class="input-label">Email:</label>
+                <input type="email" id="email" class="form-inputs" required>
+                <div class="error" id="email-error"></div>
+            </div>
+            <div>
+                <label for="message" class="input-label">Message:</label>
+                <textarea id="message" class="form-inputs" required></textarea>
+                <div class="error" id="message-error"></div>
+            </div>
+            <div>
+                <button class="submit-button" type="submit" onclick="sendMail()">Submit</button>
+            </div>
+            <p style="margin-bottom: 0;">Or</p>
+            <p>If you have any questions or want to give us some feedback, Contact Us at techyeyetools@gmail.com.</p>
+
+        </div>
+    </div>
+
+
+    <script>
+        function sendMail() {
+            var params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value,
+            };
+
+            const serviceID = "service_r8tt37r";
+            const templateID = "template_zdnb843";
+
+            emailjs.send(serviceID, templateID, params)
+                .then(res => {
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("message").value = "";
+                    console.log(res);
+                    alert("Your message sent successfully!!")
+
+                })
+                .catch(err => console.log(err));
+
+        }
+
+
+    </script>
+    <footer>
+
+        <div class="footer">
+            <p>&copy; 2023 AiPoemGenerator | All Rights Reserved.</p>
+
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,384 @@
+@font-face {
+  font-family: para-font;
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: El Messiri;
+  src: url('../fonts/ElMessiri-Bold.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  font-family: 'para-font', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 100vh;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 90%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.outer-container a {
+  text-decoration: none;
+  background-color: #26a69a;
+  color: #fff;
+  padding: 15px 22px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 30px auto;
+}
+
+.content-container {
+
+  max-width: 700px;
+  margin: 60px auto;
+
+}
+
+.example-container {
+  text-align: center;
+  width: 90%;
+  padding: 10px;
+  background-color: #eeeeeea6;
+  border-radius: 5px;
+  margin: 50px auto;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+
+nav {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.827);
+  backdrop-filter: blur(6px);
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 -2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 2px 10px 1px 10px;
+  border-radius: 5px;
+  border: 2px solid #26a69900;
+}
+
+nav a:hover {
+  border: 2px solid #26a69a;
+  padding: 2px 10px 1px 10px;
+  transition: all 0.6s ease;
+}
+
+
+
+
+
+
+h1 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #222;
+  font-family: 'El Messiri', sans-serif;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 18px;
+  padding: 10px;
+  width: 95%;
+  margin: 5px auto;
+  border-radius: 5px;
+}
+
+textarea {
+
+  font-size: 18px;
+  padding: 10px;
+  width: 95%;
+  margin: 5px auto;
+  border-radius: 5px;
+
+}
+
+textarea:focus {
+  box-shadow: none;
+
+  outline: none;
+
+
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-bottom: 3px solid #26a69a;
+  box-shadow: none;
+
+  outline: none;
+
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  background-color: #26a69a;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
+  width: 200px;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover,
+.outer-container a:hover {
+  background-color: #009688;
+}
+
+#poem {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* #poem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+} */
+
+#poem p {
+  white-space: pre-line;
+}
+
+/* extra css for content */
+
+
+
+.content-container li {
+  font-family: 'para-font', sans-serif;
+  font-size: 1rem;
+  padding: 0;
+  color: #363636;
+  width: 90%;
+
+}
+
+h2,
+h3,
+h4 {
+  margin: 20px auto;
+}
+
+
+
+h2 {
+
+  color: #333333;
+
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+
+  font-size: 1.4rem;
+  padding: 10px;
+
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for responsive design */
+
+/* extra small */
+
+
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .outer-container {
+
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  input[type="text"] {
+    font-size: 16px;
+  }
+
+  button[type="submit"] {
+    font-size: 16px;
+    padding: 8px 16px;
+    width: 180px;
+  }
+
+  #poem {
+    font-size: 16px;
+  }
+
+
+  nav a {
+    font-size: 0.8rem;
+    margin: 5px auto;
+
+
+
+  }
+
+  nav li {
+    margin: 0;
+
+
+
+  }
+
+
+  .content-container {
+    width: 90%;
+  }
+
+  h2 {
+
+    margin: auto;
+    font-size: 1.2rem;
+  }
+
+}
+
+
+
+
+/* Medium screens */
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+  .outer-container {
+    padding: 20px;
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  input[type="text"] {
+    font-size: 16px;
+  }
+
+  button[type="submit"] {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  #poem {
+    font-size: 18px;
+  }
+
+
+  nav a {
+    font-size: 0.9 rem;
+  }
+
+  .content-container {
+    width: 80%;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 961px) {
+
+
+  h1 {
+    font-size: 36px;
+  }
+
+  input[type="text"] {
+    font-size: 18px;
+  }
+
+  button[type="submit"] {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  #poem {
+    font-size: 18px;
+  }
+}
