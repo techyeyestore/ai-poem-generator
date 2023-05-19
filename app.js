@@ -20,7 +20,7 @@ const port = process.env.PORT || 3000;
 
 const openAi = new OpenAIApi(
   new Configuration({
-    apiKey: process.env.API_KEY,
+    apiKey: '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',
   })
 )
 
